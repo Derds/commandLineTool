@@ -1,0 +1,112 @@
+import cmd, datetime, os
+
+# https://medium.com/@noransaber685/simple-guide-to-creating-a-command-line-interface-cli-in-python-c2de7b8f5e05
+class MyCLI(cmd.Cmd):
+
+    def __init__(self):
+        super().__init__()
+        self.current_directory = os.getcwd()
+    ##############################    
+    #  Enter
+    def preloop(self):
+        # Add custom initialization here
+        # credits to https://www.asciiart.eu/computers/smileys
+        print(" ")
+        print("     |\ | |  ||\ \ /\(_~     |~\)|_~|\/||_~|\/||~)|_~|~)")
+        print("     |~\|_|/\||~\ | ,_)      |~\ |__|  ||__|  ||_)|__|~\ ")
+        print(" ")
+        print("     \ //~\| |    |\ |~)|_~    | ||\ ||/~\| ||_~ ")
+        print("      | \_/\_/    |~\|~\|__    \_/| \||\_X\_/|__ ")
+        print(" ")
+        print("     (J U S T   L I K E   E V E R Y O N E   E L S E)")
+        print("       _____         _____         _____         _____")
+        print("     .'     '.     .'     '.     .'     '.     .'     '.")
+        print("    /  o   o  \   /  o   o  \   /  o   o  \   /  o   o  \ ")
+        print("   |           | |           | |           | |           |")
+        print("   |  \     /  | |  \     /  | |  \     /  | |  \     /  |")
+        print("    \  '---'  /   \  '---'  /   \  '---'  /   \  '---'  /")
+        print(" jgs '._____.'     '._____.'     '._____.'     '._____.'")
+        print("       _____         _____         _____         _____")
+        print("     .'     '.     .'     '.     .'     '.     .'     '.")
+        print("    /  o   o  \   /  o   o  \   /  o   o  \   /  o   o  \ ")
+        print("   |           | |           | |           | |           |")
+        print("   |  \     /  | |  \     /  | |  \     /  | |  \     /  |")
+        print("    \  '---'  /   \  '---'  /   \  '---'  /   \  '---'  /")
+        print("     '._____.'     '._____.'     '._____.'     '._____.'")
+        print(" ")
+        print("..... W E L C O M E  T O  C O M M A N D  L I N E  T O O L ....")
+        print(" ")
+
+    def do_hello(self, line):
+        """Print a greeting."""
+        print("Hello, World!")
+
+    ##############################################
+    # Exit
+    def do_quit(self, line):
+        """Exit the CLI."""
+        return True
+    
+    def do_q(self, line):
+        """Exit the CLI."""
+        return True
+
+    def postloop(self):
+        # Add custom cleanup or finalization here
+        print("Good bye!")
+
+    prompt = '>> '  # Change the prompt text
+    intro = 'Welcome to MyCLI. Type "help" for available commands.'  # Your intro message
+    file_path = 'todo_file' #default output file
+
+    ################################################
+    # Functions
+
+    def do_datetime(self, line):
+        """Give the current date time"""
+        x = datetime.datetime.now()
+        print(x)
+
+    def do_create_file(self, filename):
+        """Create a new text file in the current directory."""
+        file_path = os.path.join(self.current_directory, filename)
+        try:
+            with open(file_path, 'w') as new_file:
+                print(f"File '{filename}' created in {self.current_directory}")
+        except Exception as e:
+            print(f"Error: {e}")
+
+    def do_read_file(self, filename):
+        """Read the contents of a text file in the current directory."""
+        file_path = os.path.join(self.current_directory, filename)
+        try:
+            with open(file_path, 'r') as existing_file:
+                print(existing_file.read())
+        except FileNotFoundError:
+            print(f"File '{filename}' not found.")
+        except Exception as e:
+            print(f"Error: {e}")
+    
+    def do_add_todo(self, todo):
+        """Add todo object to text file in the current directory."""
+        if not bool(self.file_path):
+           do_set_file()
+        try:
+            with open(file_path, 'w') as existing_file:
+                existing_file.writelines(todo)
+        except FileNotFoundError:
+            print(f"File '{filename}' not found.")
+        except NameError:
+            print("file path not set, run set_file")
+        except Exception as e:
+            print(f"Error: {e}")
+
+    def do_set_file(self, filename):
+        """Update the file path in the current directory."""
+        global file_path 
+        file_path = os.path.join(self.current_directory, filename)
+
+
+if __name__ == '__main__':
+    MyCLI().cmdloop()
+
