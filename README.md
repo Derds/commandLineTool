@@ -16,3 +16,4 @@
 - help planning day
   -   todo length limits i.e only ten todos allowed
   -   using the priority index to rank by importance
+    
