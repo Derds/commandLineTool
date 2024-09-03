@@ -11,10 +11,10 @@
 
 ## Planned features
 
-- [] multi line to do add
-- [] todo remove item
-- [] help planning day
- - [] todo length limits i.e only ten todos allowed
- -  [] using the priority index to rank by importance
+- [ ] multi line to do add
+- [ ] todo remove item
+- [ ] help planning day
+ - [ ] todo length limits i.e only ten todos allowed
+ - [ ] using the priority index to rank by importance
     
 ![Alt Text](https://unsplash.com/photos/person-writing-bucket-list-on-book-RLw-UC03Gwc)
