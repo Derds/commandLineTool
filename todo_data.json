@@ -10,8 +10,21 @@
     {
       "id": 2,
       "description": "Call dentist",
+      "completed": true,
+      "created_at": "2025-12-02T16:24:03.343796",
+      "completed_at": "2025-12-02T16:42:00.850632"
+    },
+    {
+      "id": 3,
+      "description": "Buy milk",
       "completed": false,
-      "created_at": "2025-12-02T16:24:03.343796"
+      "created_at": "2025-12-02T16:40:38.505450"
+    },
+    {
+      "id": 4,
+      "description": "Pick up package",
+      "completed": false,
+      "created_at": "2025-12-02T16:40:52.244781"
     }
   ],
   "habits": [
@@ -35,6 +48,14 @@
         "Friday"
       ],
       "created_at": "2025-12-02T16:24:42.084509",
+      "completions": []
+    },
+    {
+      "id": 3,
+      "description": "Exercise 30 minutes",
+      "frequency": "daily",
+      "days": [],
+      "created_at": "2025-12-02T16:41:05.536013",
       "completions": []
     }
   ]
