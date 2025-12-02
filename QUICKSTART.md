@@ -3,37 +3,71 @@
 ## Running the Tool
 
 ```bash
-cd ../commandLineTool
+cd /Users/dervla.obrien/Documents/personal-projects/commandLineTool
 python3 todo.py
 ```
 
-## Basic Workflow
+## The 4 Main Commands
 
-### Managing Tasks
+### 1. 📅 TODAY - See what's on your plate
+```
+📋 > today
+```
+Shows all tasks and habits due today in one organized view.
+
+### 2. 🎯 NEXT - Focus on what matters
+```
+📋 > next           # Shows next 3 items
+📋 > next 1         # Shows just 1 item to focus on
+```
+Perfect for staying focused! Shows only your next 1-3 items.
+
+### 3. ➕ ADD - Create items quickly
 ```
 📋 > add Buy milk
-📋 > add Finish report
-📋 > list
-📋 > done 1
-📋 > remove 2
+📋 > add daily Exercise
+📋 > add weekly monday,friday Team meeting
 ```
 
-### Managing Habits
+### 4. ✅ DONE - Complete items
+```
+📋 > done 1              # Complete task or habit
+📋 > done task 1         # Specify it's a task
+📋 > done habit 2        # Specify it's a habit
+```
+
+## Quick Workflow Examples
+
+### Morning Routine
+```
+📋 > today                              # See what's on your plate
+📋 > next 1                             # Focus on first item
+📋 > done 1                             # Check it off
+📋 > next 1                             # Get next item
+```
+
+### Adding Tasks
+```
+📋 > add Buy groceries
+📋 > add Call dentist
+📋 > add Finish report
+📋 > today                              # See all your tasks
+```
+
+### Setting Up Habits
 
 **Daily habits** (repeat every day):
 ```
-📋 > habit daily Drink 8 glasses of water
-📋 > habit daily Exercise for 30 minutes
-📋 > habits
-📋 > check 1
+📋 > add daily Drink 8 glasses of water
+📋 > add daily Exercise for 30 minutes
+📋 > add daily Review daily goals
 ```
 
 **Weekly habits** (repeat on specific days):
 ```
-📋 > habit weekly monday,friday Team meeting prep
-📋 > habit weekly tuesday,thursday Yoga class
-📋 > habits
-📋 > check 2
+📋 > add weekly monday,wednesday,friday Gym workout
+📋 > add weekly tuesday,thursday Yoga class
+📋 > add weekly friday Weekly review
 ```
 
 ## Command Reference Card
