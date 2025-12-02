@@ -6,6 +6,8 @@ A simple and powerful terminal-based todo list manager with support for tasks an
 
 - ✅ **Tasks**: One-time todos that you can add, complete, and remove
 - 🔄 **Habits**: Recurring tasks that repeat daily or on specific weekdays
+- 🎯 **Focus Mode**: "Next" view shows 1-3 items to focus on right now
+- 📅 **Today View**: See all tasks and habits due today in one place
 - 💾 **Persistent Storage**: All data saved automatically to JSON file
 - 🎨 **Clean Interface**: Easy-to-read terminal UI with emojis
 - 🚀 **Extensible**: Built with future API integrations in mind
@@ -27,35 +29,57 @@ Or run directly (after making it executable):
 ./todo.py
 ```
 
-### Available Commands
+### Main Commands
 
-#### Task Management
+The tool is organized around 4 main workflows:
 
-| Command | Description | Example |
-|---------|-------------|---------|
-| `add <description>` | Add a new task | `add Buy groceries` |
-| `list` | Show incomplete tasks | `list` |
-| `list all` | Show all tasks (including completed) | `list all` |
-| `done <id>` | Mark task as completed | `done 1` |
-| `remove <id>` | Remove a task | `remove 1` |
+#### 📅 Today - See everything due today
+```bash
+today          # Show all tasks and habits due today
+```
 
-#### Habit Management
+#### 🎯 Next - Focus on 1-3 items
+```bash
+next           # Show next 3 items to focus on
+next 1         # Show just 1 item
+next 5         # Show next 5 items
+```
 
-| Command | Description | Example |
-|---------|-------------|---------|
-| `habit daily <description>` | Add a daily habit | `habit daily Drink 8 glasses of water` |
-| `habit weekly <days> <description>` | Add a weekly habit | `habit weekly monday,wednesday,friday Go to gym` |
-| `habits` | List all habits with status | `habits` |
-| `check <id>` | Mark habit as completed for today | `check 1` |
-| `remove_habit <id>` | Remove a habit | `remove_habit 1` |
+#### ➕ Add - Create tasks and habits
+```bash
+add <description>                    # Add a task
+add daily <description>              # Add daily habit
+add weekly <days> <description>      # Add weekly habit
+```
 
-#### General Commands
+#### ✅ Done - Complete items
+```bash
+done <id>                # Auto-detect and complete task or habit
+done task <id>           # Complete a specific task
+done habit <id>          # Check off a habit for today
+```
 
-| Command | Description |
-|---------|-------------|
-| `clear` | Clear the screen |
-| `help` | Show available commands |
-| `quit` or `q` | Exit the application |
+#### 🗑️ Remove - Delete items
+```bash
+remove task <id>         # Remove a task
+remove habit <id>        # Remove a habit
+```
+
+#### 👀 View - See complete lists
+```bash
+view tasks              # View all incomplete tasks
+view tasks all          # View all tasks including completed
+view habits             # View all habits with status
+```
+
+#### 🔧 Other Commands
+```bash
+edit                    # Show edit mode commands
+help                    # Show detailed help
+help <command>          # Get help for specific command
+clear                   # Clear the screen
+quit, q                 # Exit the application
+```
 
 ## Example Session
 
@@ -66,33 +90,59 @@ Or run directly (after making it executable):
 📋 > add Call dentist
 ✅ Task added with ID: 2
 
-📋 > list
-============================================================
-ID    Status     Task                                    
-============================================================
-1     ○ Todo     Buy milk                                
-2     ○ Todo     Call dentist                            
-============================================================
-
-📋 > habit daily Morning meditation
+📋 > add daily Morning meditation
 ✅ Daily habit added with ID: 1
 
-📋 > habit weekly monday,wednesday,friday Workout
-✅ Weekly habit added with ID: 2 (Days: Monday, Wednesday, Friday)
+📋 > add weekly monday,friday Workout
+✅ Weekly habit added with ID: 2 (Days: Monday, Friday)
 
-📋 > habits
-================================================================================
-ID    Status          Frequency       Habit                         
-================================================================================
-1     ○ Due Today     Daily           Morning meditation            
-2     ○ Due Today     Weekly (Monday, Wednesday, Friday) Workout                        
-================================================================================
+📋 > today
+======================================================================
+                            TODAY'S AGENDA                            
+======================================================================
 
-📋 > check 1
-✅ Habit 1 checked off for today!
+📋 TASKS:
+  [1] Buy milk
+  [2] Call dentist
+
+🔄 HABITS:
+  [1] Morning meditation - Daily
+  [2] Workout - Weekly (Monday, Friday)
+
+======================================================================
+Total: 2 task(s), 2 habit(s)
+======================================================================
+
+📋 > next 2
+======================================================================
+                      NEXT 2 ITEM(S) TO FOCUS ON                      
+======================================================================
+
+1. 📋 [1] Buy milk
+   Type: Task
+
+2. 📋 [2] Call dentist
+   Type: Task
+
+======================================================================
+
+💡 Tip: You have 2 more item(s). Type 'today' to see all.
 
 📋 > done 1
 ✅ Task 1 marked as completed!
+
+📋 > done habit 1
+✅ Habit 1 checked off for today!
+
+📋 > next
+======================================================================
+                      NEXT 1 ITEM(S) TO FOCUS ON                      
+======================================================================
+
+1. 📋 [2] Call dentist
+   Type: Task
+
+======================================================================
 
 📋 > quit
 👋 Goodbye! Stay productive!

@@ -36,54 +36,80 @@ python3 todo.py
 📋 > check 2
 ```
 
-## Tips
-
-- Use `list all` to see completed tasks
-- Habits show "Due Today" or "Not Due" based on the current day
-- Daily habits are due every day
-- Weekly habits are only due on the days you specify
-- Data is automatically saved after each command
-- Use `clear` to clear the screen if it gets cluttered
-- Press `Ctrl+D` or type `quit` to exit
-
 ## Command Reference Card
 
 | Command | Purpose |
 |---------|---------|
-| `add <task>` | Add new task |
-| `list` | Show pending tasks |
-| `done <id>` | Complete task |
-| `habit daily <desc>` | Add daily habit |
-| `habit weekly <days> <desc>` | Add weekly habit |
-| `habits` | Show all habits |
-| `check <id>` | Complete habit today |
+| `today` | Show all tasks & habits due today |
+| `next [n]` | Show next 1-3 items to focus on |
+| `add <desc>` | Add a task |
+| `add daily <desc>` | Add daily habit |
+| `add weekly <days> <desc>` | Add weekly habit |
+| `done <id>` | Complete task or habit |
+| `remove task <id>` | Delete a task |
+| `remove habit <id>` | Delete a habit |
+| `view tasks` | See all tasks |
+| `view habits` | See all habits |
+| `edit` | Show edit commands |
+| `help` | Show help |
 | `quit` | Exit |
+
+## Pro Tips
+
+💡 **Stay Focused**: Use `next 1` to see just one thing to work on at a time
+
+💡 **Quick Complete**: Just type `done 2` instead of `done task 2` - it auto-detects!
+
+💡 **See Everything**: Use `today` at the start of your day to see your full agenda
+
+💡 **View Full Lists**: Use `view tasks` or `view habits` to see complete lists
+
+💡 **Habit Tracking**: Daily habits show every day, weekly habits only on specified days
+
+💡 **Auto-Save**: Everything is saved automatically after each command
 
 ## Examples
 
-### Morning Routine Setup
+### Daily Workflow
 ```
-📋 > habit daily Morning meditation
-📋 > habit daily Review daily goals
-📋 > habit daily Check emails
-📋 > add Prepare presentation for Monday
-```
-
-### Fitness Tracking
-```
-📋 > habit weekly monday,wednesday,friday Gym workout
-📋 > habit weekly tuesday,thursday Yoga
-📋 > habit daily 10k steps
-📋 > habit daily Drink water reminder
+📋 > today                              # Start your day
+📋 > next 3                             # See top 3 priorities
+📋 > done 1                             # Complete first item
+📋 > add New urgent task                # Add something that came up
+📋 > next 2                             # Focus on next 2 items
 ```
 
-### Work Tasks
+### Setting Up Your Life
+
+**Morning routine:**
 ```
-📋 > add Review pull requests
-📋 > add Update documentation
-📋 > add Respond to client email
-📋 > habit daily Standup meeting
-📋 > habit weekly friday Weekly report
+📋 > add daily Morning meditation
+📋 > add daily Review daily goals  
+📋 > add daily Check emails
+```
+
+**Fitness goals:**
+```
+📋 > add weekly monday,wednesday,friday Gym workout
+📋 > add daily 10k steps
+📋 > add daily Drink 8 glasses water
+```
+
+**Work habits:**
+```
+📋 > add daily Standup meeting
+📋 > add weekly friday Weekly review
+📋 > add weekly monday,wednesday Deep work session
+```
+
+### Managing Your Day
+```
+📋 > today                              # See everything due
+📋 > next 1                             # Ultra-focused mode
+📋 > done 1                             # Complete it
+📋 > next 1                             # Get next item
+📋 > done habit 2                       # Check off a habit
+📋 > view tasks                         # See all tasks
 ```
 
 Enjoy staying organized! 📝✨
