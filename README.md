@@ -4,8 +4,9 @@ A simple and powerful terminal-based todo list manager with support for tasks an
 
 ## Features
 
-- ✅ **Tasks**: One-time todos that you can add, complete, and remove
+- ✅ **Tasks**: One-time todos that you can add, complete, edit, and remove
 - 🔄 **Habits**: Recurring tasks that repeat daily or on specific weekdays
+- ✏️ **Edit Mode**: Update task descriptions, habit details, frequencies, and days
 - 🎯 **Focus Mode**: "Next" view shows 1-3 items to focus on right now
 - 📅 **Today View**: See all tasks and habits due today in one place
 - 💾 **Persistent Storage**: All data saved automatically to JSON file
@@ -57,6 +58,14 @@ add weekly <days> <description>      # Add weekly habit
 done <id>                # Auto-detect and complete task or habit
 done task <id>           # Complete a specific task
 done habit <id>          # Check off a habit for today
+```
+
+#### ✏️ Update - Edit items
+```bash
+update task <id> <new description>           # Update task description
+update habit <id> desc <new description>     # Update habit description
+update habit <id> days <new days>            # Update weekly habit days
+update habit <id> freq <daily|weekly>        # Update habit frequency
 ```
 
 #### 🗑️ Remove - Delete items

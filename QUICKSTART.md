@@ -80,6 +80,10 @@ Perfect for staying focused! Shows only your next 1-3 items.
 | `add daily <desc>` | Add daily habit |
 | `add weekly <days> <desc>` | Add weekly habit |
 | `done <id>` | Complete task or habit |
+| `update task <id> <desc>` | Edit task description |
+| `update habit <id> desc <desc>` | Edit habit description |
+| `update habit <id> days <days>` | Edit habit days |
+| `update habit <id> freq <freq>` | Change habit frequency |
 | `remove task <id>` | Delete a task |
 | `remove habit <id>` | Delete a habit |
 | `view tasks` | See all tasks |
@@ -101,6 +105,8 @@ Perfect for staying focused! Shows only your next 1-3 items.
 💡 **Habit Tracking**: Daily habits show every day, weekly habits only on specified days
 
 💡 **Auto-Save**: Everything is saved automatically after each command
+
+💡 **Editing Made Easy**: Fix typos or change habits without deleting and recreating
 
 ## Examples
 

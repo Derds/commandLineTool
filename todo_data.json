@@ -17,20 +17,36 @@
     {
       "id": 3,
       "description": "Buy milk",
+      "completed": true,
+      "created_at": "2025-12-02T16:40:38.505450",
+      "completed_at": "2025-12-02T17:12:00.150690"
+    },
+    {
+      "id": 4,
+      "description": "task [] buy a fountain pen",
       "completed": false,
-      "created_at": "2025-12-02T16:40:38.505450"
+      "created_at": "2025-12-02T16:57:56.247029"
+    },
+    {
+      "id": 5,
+      "description": "Buy groceries and vegetables",
+      "completed": false,
+      "created_at": "2025-12-02T17:01:09.365696",
+      "updated_at": "2025-12-02T17:04:40.727753"
     }
   ],
   "habits": [
     {
       "id": 1,
-      "description": "Morning",
+      "description": "Morning meditation and journaling",
       "frequency": "daily",
       "days": [],
       "created_at": "2025-12-02T16:24:29.143640",
       "completions": [
         "2025-12-02"
-      ]
+      ],
+      "updated_at": "2025-12-02T17:05:23.072119",
+      "time_of_day": "anytime"
     },
     {
       "id": 2,
@@ -38,21 +54,68 @@
       "frequency": "weekly",
       "days": [
         "Monday",
+        "Tuesday",
         "Wednesday",
+        "Thursday",
         "Friday"
       ],
       "created_at": "2025-12-02T16:24:42.084509",
-      "completions": []
+      "completions": [],
+      "updated_at": "2025-12-02T17:05:37.012062",
+      "time_of_day": "anytime"
     },
     {
       "id": 3,
       "description": "Exercise 30 minutes",
-      "frequency": "daily",
-      "days": [],
+      "frequency": "weekly",
+      "days": [
+        "Saturday",
+        "Sunday"
+      ],
       "created_at": "2025-12-02T16:41:05.536013",
       "completions": [
         "2025-12-02"
-      ]
+      ],
+      "updated_at": "2025-12-02T17:06:20.661408",
+      "time_of_day": "anytime"
+    },
+    {
+      "id": 4,
+      "description": "Brush teeth",
+      "frequency": "daily",
+      "days": [],
+      "time_of_day": "morning",
+      "created_at": "2025-12-02T17:20:35.665870",
+      "completions": []
+    },
+    {
+      "id": 5,
+      "description": "Go for a walk",
+      "frequency": "daily",
+      "days": [],
+      "time_of_day": "afternoon",
+      "created_at": "2025-12-02T17:20:50.153390",
+      "completions": []
+    },
+    {
+      "id": 6,
+      "description": "Make dinner",
+      "frequency": "daily",
+      "days": [],
+      "time_of_day": "evening",
+      "created_at": "2025-12-02T17:21:04.986731",
+      "completions": []
+    },
+    {
+      "id": 7,
+      "description": "Evening class",
+      "frequency": "weekly",
+      "days": [
+        "Wednesday"
+      ],
+      "time_of_day": "evening",
+      "created_at": "2025-12-02T17:21:20.196882",
+      "completions": []
     }
   ]
 }

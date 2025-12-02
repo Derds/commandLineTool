@@ -1,5 +1,35 @@
 # Changelog
 
+## Version 2.1 - Edit Functionality (2025-12-02)
+
+### New Features
+
+#### ✏️ Update Command
+- **`update task <id> <new description>`**: Edit task descriptions
+  - Shows before/after preview
+  - Fixes typos without deleting and recreating
+  - Tracks update timestamp
+
+- **`update habit <id> desc <new description>`**: Update habit descriptions
+  - Change habit names on the fly
+  - Maintains completion history
+
+- **`update habit <id> days <new days>`**: Change weekly habit days
+  - Update which days a weekly habit repeats
+  - Validates day names
+  - Shows before/after comparison
+
+- **`update habit <id> freq <daily|weekly>`**: Change habit frequency
+  - Switch between daily and weekly
+  - Automatically clears days when switching to daily
+  - Preserves completion history
+
+### Improvements
+- All update operations show before/after preview
+- Better error messages for invalid updates
+- Added `updated_at` timestamp tracking
+- Edit menu updated to include update commands
+
 ## Version 2.0 - Improved UX (2025-12-02)
 
 ### New Features
